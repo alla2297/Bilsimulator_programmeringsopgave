@@ -14,6 +14,7 @@ public class Main {
         tesla.motorStigningOmdrejninger(8);
         tesla.cruiseControl(1);
         tesla.rat(30);
+        System.out.println("hey");
 
     }
 }
