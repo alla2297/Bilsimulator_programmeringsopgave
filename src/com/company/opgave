@@ -1,0 +1,61 @@
+Skriv en applikation, som kan bruges som et simpelt styresystem til en elbil som fx en Tesla.
+Bilen skal kunne styres med ren elektronik.
+
+1. Du skal begynde med at bygge en Bil klasse. Bilen skal have adskillige egenskaber, som beskriver bilen.
+Lav instansvariabler til disse egenskaber, fx biltype, model, stelnummer, antal døre, softwareversion, GPS koordinater,
+hastighed m.fl. Være opmærksom på at vælge de rigtige variabeltyper. Lav getters og setters til disse egenskaber.
+
+2.Lav en Main klasse, som skal indeholde en main-metode, som vi kan eksekvere.
+Mainmetoden skal oprette  et Bil-objekt, og vise dets egenskaber.
+
+3.Herefter skal du “konstruere” bilen af de dele, som en rigtig bil består af.
+Lav klasserne: Rat, Bremse, Motor og Hjul og lav instanser af dem til Bil klassen.
+
+4.Når dette er gjort, skal du lave metoder i Bil klassen, som kan få bilen til at starte og stoppe.
+I virkeligheden vil disse kobles til bilens elektronik, men i denne øvelse skal de blot udskrive beskeder såsom:
+Motor tændt, Motor slukket. Hastighed stiger med 1 km/t. Bremsen er presset 87% ned.
+
+Lav metoder til følgende:
+
+1.Motor skal kunne tændes, slukkes. Motorens omdrejning kan have værdier mellem 0% og 100%, og du skal lave metoder,
+som øger omdrejninger med 1% eller sænker omdrejninger med 1%.
+Du skal også lave en metode som hedder cruiseControl(int hastighed),
+som kan sætte bilens omdrejning til et tal mellem 1% og 100%.
+
+2.Hjul skal kunne dreje fra -75 grader (venstre) til +75 grader (højre).
+Når rattet drejer, skal hjulene også dreje tilsvarende. Når hjulene drejer, skal rattet også reje tilsvarende.
+
+3.Bremsen kan være presset ind mellem 0% og 100%. 100% betyder fuld opbremsning,
+mens 0% betyder at bremsen er ikke presset ned. Denne skal påvirke omdrejningerne i bilens motor tilsvarende.
+
+Når det hele ser ud til at spille sammen, kan du udvide main-metoden således, at bilen kan styres vi kommandoer.
+Et eksempel på en kørsel af programmet:
+
+Bilobjektet er oprettet.
+
+Biltype: Tesla
+Model: Model X
+Stelnummer,: 02930923
+Antal døre: 4
+Softwareversion: 0.0.1
+GPS koordinater: 55.22458, 11.757075
+Hastighed: 0 km/t
+
+Venter på kommando (fx start, stop, accelerer, brems, drej, status): start
+Motoren er startet.
+
+Venter på kommando (fx start, stop, accelerer, brems, drej, status): accelerer
+Bilen accelerer, omdrejning er 1%.
+
+Venter på kommando (fx start, stop, accelerer, brems, drej, status): accelerer
+Bilen accelerer, omdrejning er 2%.
+
+Venter på kommando (fx start, stop, accelerer, brems, drej, status): drej
+Hvilken vej? Venstre
+Hvor meget? 10
+Drejer venstre 10%.
+
+Venter på kommando (fx start, stop, accelerer, brems, drej, status): status
+Bilen Tesla kører med 2%, drejer -10%.
+
+Udvid programmet, så simulationen bliver så realistisk som muligt.
